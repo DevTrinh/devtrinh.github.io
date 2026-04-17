@@ -33,6 +33,7 @@ jobs:
           mkdir public
           cp index.html public/index.html
           cp app-ads.txt public/app-ads.txt
+          printf 'custom artifact\n' > public/artifact-check.txt
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
