@@ -29,8 +29,7 @@ jobs:
         run: |
           mkdir public
           cp index.html public/index.html
-          mkdir public/app-ads.txt
-          cp app-ads.txt public/app-ads.txt/index.html
+          cp app-ads.txt public/app-ads.txt
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
