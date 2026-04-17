@@ -22,9 +22,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Wait for branch deployment
-        run: sleep 90
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -33,8 +30,6 @@ jobs:
           mkdir public
           cp index.html public/index.html
           cp app-ads.txt public/app-ads.txt
-          cp app-ads.txt public/app-ads-copy.txt
-          printf 'custom artifact\n' > public/artifact-check.txt
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
